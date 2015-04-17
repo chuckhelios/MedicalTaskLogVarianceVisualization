@@ -5,6 +5,10 @@ html, body {
     padding: 0;
 }
 
+#header-title{
+  text-align: center;
+}
+
 .btn-circle {
   width: 15px;
   height: 15px;
@@ -57,8 +61,8 @@ html, body {
 }
 
 .lower-row div{
-	display: inline-block;
-}
+/*	display: inline-block;
+*/}
 
 
 /* arrow control*/
@@ -104,4 +108,51 @@ html, body {
 
 .d3plus_drawer{
 	position: relative;
+}
+
+
+#slider-date{
+  width: 90%;
+  height: 3px;
+  text-align: center;
+  margin:auto;
+}
+
+#slider-date .noUi-handle{
+  width: 24px;
+  height: 18px;
+}
+
+#slider-date .noUi-handle:before,
+#slider-date .noUi-handle:after{
+  height: 6px;
+}
+
+#event-start {
+  margin-right: 8px;
+}
+
+#departmentID{
+  position: absolute;
+  left: 240px;
+  top: -5px;
+  width: 25px;
+  height: 25px;
+/*  float: left;
+*/}
+
+.departIDtxt{
+  position: absolute;
+  left: 80px;
+  top: -4px;
+  width: 150px;
+
+}
+
+.departIDtxt p{
+  font-size: 12px;
+  padding: 2px;
+  margin-left: 20px;
+  font-weight: bold;
+  opacity: 0.7
 }

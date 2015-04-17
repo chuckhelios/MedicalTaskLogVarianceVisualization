@@ -1,33 +1,15 @@
 
-var dep_id = "overview";
 var datearray = [];
 var colorrange = [];
 var subtitleTxt = "Overall View";
 
-var csvpath = "./athena_deptStem.csv";
+var csvpath = "./athena_streamplot_Over.csv";
 var color = "blue";
 
 setTimeout(function(){
   streamChart();
 }, 1000);
 
-
-// onchange department id
-$("#departmentID").change(function(){
-  dep_id = $(this).val()
-  var datearray = [];
-  var colorrange = [];
-  var subtitleTxt = "Overall View";
-  $(".departIDtxt p").remove();
-  $(".chart svg").remove();
-
-  if (dep_id == "overview"){
-    streamChart();
-  }
-  else {
-    streamChart();
-  }
-}); // end of onchange
 
 // Main Function
 function streamChart(){
@@ -46,7 +28,7 @@ else if (color == "orange") {
 }
 
 strokecolor = colorrange[0];
-
+var dep_id = inter_key;
 var format = d3.time.format("%m/%d/%y"); //set reader for date.format
 // size and margin
 
@@ -112,19 +94,18 @@ var svg = d3.select(".chart").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-// read data and pass it into 2-d presentation
-var filters = {'dep_id':dep_id};
-
-// read file start 
+//////////// read file start //////////////
+//////////////////////////////////////////
 var graph = d3.csv(csvpath, function(data) {
   // get process of data if dep_id is given
+
   if (data[0].hasOwnProperty('dep_id')){
     subtitleTxt = "DepartmentID: " + dep_id.toString();
     data = data.filter(function(row) {
       return row['dep_id'] == dep_id;
-    })
+    });
   }
-  
+
   data.forEach(function(d) {
     d.date = format.parse(d.date); // read and parse date
     d.value = +d.value; // parse value
@@ -141,10 +122,6 @@ var graph = d3.csv(csvpath, function(data) {
       .attr("class", "layer")
       .attr("d", function(d) { return area(d.values); })
       .style("fill", function(d, i) { return z(i); }); // call z and fill color
-
-  d3.select(".departIDtxt").append("p")
-      .text(subtitleTxt);
-
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
@@ -206,12 +183,19 @@ var graph = d3.csv(csvpath, function(data) {
       .classed("hover", false)
       .attr("stroke-width", "0px"), tooltip.html("<ul id='tipInfo'><li>Date: " + mmdd + "</li> <li>Task: "+ d.key + "</li><li> Number: " + pro +  "</li></ul>" ).style("visibility", "hidden");
   })
+  svg.append("text")
+          .attr("x", (width / 2))             
+          .attr("y", 0 - (margin.top / 2))
+          .attr("text-anchor", "middle")  
+          .style("font-size", "8px") 
+          .style("margin", "auto")  
+          .text(subtitleTxt);
     //  the vertical line following the mouse
   var vertical = d3.select(".chart")
         .append("div")
         .attr("class", "remove")
         .style("position", "absolute")
-        .style("z-index", "19")
+        .style("z-index", "1000")
         .style("width", "1px")
         .style("height", "380px")
         .style("position", "absolute")
@@ -228,4 +212,6 @@ var graph = d3.csv(csvpath, function(data) {
          vertical.style("left", mousex + "px")});
 }); // read file end
 }  // end of main function
+
+
 

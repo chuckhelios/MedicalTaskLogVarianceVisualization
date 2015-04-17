@@ -1,0 +1,211 @@
+dep_id,key,value
+6,Assess & Diagnose,173
+15,Assess & Diagnose,120
+40,Assess & Diagnose,0
+164,Assess & Diagnose,601
+264,Assess & Diagnose,0
+371,Assess & Diagnose,3
+419,Assess & Diagnose,236
+482,Assess & Diagnose,670
+547,Assess & Diagnose,8
+577,Assess & Diagnose,2091
+6,Collect Clinical Encounter Reason,5590
+15,Collect Clinical Encounter Reason,1735
+40,Collect Clinical Encounter Reason,412
+164,Collect Clinical Encounter Reason,3637
+264,Collect Clinical Encounter Reason,1181
+371,Collect Clinical Encounter Reason,109
+419,Collect Clinical Encounter Reason,1169
+482,Collect Clinical Encounter Reason,3375
+547,Collect Clinical Encounter Reason,736
+577,Collect Clinical Encounter Reason,7288
+6,Collect History of Present Illness,6313
+15,Collect History of Present Illness,1699
+40,Collect History of Present Illness,724
+164,Collect History of Present Illness,4553
+264,Collect History of Present Illness,959
+371,Collect History of Present Illness,145
+419,Collect History of Present Illness,1155
+482,Collect History of Present Illness,2984
+547,Collect History of Present Illness,1264
+577,Collect History of Present Illness,7070
+6,Collect Vitals,23725
+15,Collect Vitals,7640
+40,Collect Vitals,2445
+164,Collect Vitals,17946
+264,Collect Vitals,6329
+371,Collect Vitals,192
+419,Collect Vitals,4398
+482,Collect Vitals,11398
+547,Collect Vitals,2880
+577,Collect Vitals,26944
+6,Collect/Update Confidential Information,33
+15,Collect/Update Confidential Information,4
+40,Collect/Update Confidential Information,0
+164,Collect/Update Confidential Information,0
+264,Collect/Update Confidential Information,0
+371,Collect/Update Confidential Information,0
+419,Collect/Update Confidential Information,0
+482,Collect/Update Confidential Information,0
+547,Collect/Update Confidential Information,0
+577,Collect/Update Confidential Information,0
+6,Collect/Update Social History,2776
+15,Collect/Update Social History,1181
+40,Collect/Update Social History,360
+164,Collect/Update Social History,2730
+264,Collect/Update Social History,716
+371,Collect/Update Social History,7
+419,Collect/Update Social History,429
+482,Collect/Update Social History,1207
+547,Collect/Update Social History,487
+577,Collect/Update Social History,1491
+6,Collect/Update Special History,1042
+15,Collect/Update Special History,638
+40,Collect/Update Special History,174
+164,Collect/Update Special History,0
+264,Collect/Update Special History,396
+371,Collect/Update Special History,2
+419,Collect/Update Special History,34
+482,Collect/Update Special History,224
+547,Collect/Update Special History,139
+577,Collect/Update Special History,529
+6,Collect/Update/Review Patient Provider List Information,20
+15,Collect/Update/Review Patient Provider List Information,8
+40,Collect/Update/Review Patient Provider List Information,24
+164,Collect/Update/Review Patient Provider List Information,9
+264,Collect/Update/Review Patient Provider List Information,122
+371,Collect/Update/Review Patient Provider List Information,0
+419,Collect/Update/Review Patient Provider List Information,0
+482,Collect/Update/Review Patient Provider List Information,3
+547,Collect/Update/Review Patient Provider List Information,5
+577,Collect/Update/Review Patient Provider List Information,0
+6,Conduct & Document Evaluation & Management,0
+15,Conduct & Document Evaluation & Management,8
+40,Conduct & Document Evaluation & Management,0
+164,Conduct & Document Evaluation & Management,0
+264,Conduct & Document Evaluation & Management,18
+371,Conduct & Document Evaluation & Management,0
+419,Conduct & Document Evaluation & Management,0
+482,Conduct & Document Evaluation & Management,0
+547,Conduct & Document Evaluation & Management,16
+577,Conduct & Document Evaluation & Management,0
+6,Conduct Physical Exam,8128
+15,Conduct Physical Exam,2421
+40,Conduct Physical Exam,720
+164,Conduct Physical Exam,4848
+264,Conduct Physical Exam,1773
+371,Conduct Physical Exam,164
+419,Conduct Physical Exam,1554
+482,Conduct Physical Exam,3189
+547,Conduct Physical Exam,502
+577,Conduct Physical Exam,8382
+6,Conduct Procedure,234
+15,Conduct Procedure,64
+40,Conduct Procedure,20
+164,Conduct Procedure,37
+264,Conduct Procedure,78
+371,Conduct Procedure,44
+419,Conduct Procedure,14
+482,Conduct Procedure,166
+547,Conduct Procedure,0
+577,Conduct Procedure,416
+6,Conduct Review of Systems,1579
+15,Conduct Review of Systems,1604
+40,Conduct Review of Systems,810
+164,Conduct Review of Systems,2256
+264,Conduct Review of Systems,1790
+371,Conduct Review of Systems,144
+419,Conduct Review of Systems,1527
+482,Conduct Review of Systems,3190
+547,Conduct Review of Systems,22
+577,Conduct Review of Systems,7654
+6,Creating/Sending Out Orders,8052
+15,Creating/Sending Out Orders,2279
+40,Creating/Sending Out Orders,591
+164,Creating/Sending Out Orders,3954
+264,Creating/Sending Out Orders,965
+371,Creating/Sending Out Orders,57
+419,Creating/Sending Out Orders,1284
+482,Creating/Sending Out Orders,3934
+547,Creating/Sending Out Orders,733
+577,Creating/Sending Out Orders,5877
+6,Enter Patient Flow Tracking,3187
+15,Enter Patient Flow Tracking,1040
+40,Enter Patient Flow Tracking,1
+164,Enter Patient Flow Tracking,2292
+264,Enter Patient Flow Tracking,10
+371,Enter Patient Flow Tracking,68
+419,Enter Patient Flow Tracking,324
+482,Enter Patient Flow Tracking,1707
+547,Enter Patient Flow Tracking,94
+577,Enter Patient Flow Tracking,3601
+6,Interpret Incoming Clinical Data,199
+15,Interpret Incoming Clinical Data,198
+40,Interpret Incoming Clinical Data,36
+164,Interpret Incoming Clinical Data,144
+264,Interpret Incoming Clinical Data,154
+371,Interpret Incoming Clinical Data,0
+419,Interpret Incoming Clinical Data,34
+482,Interpret Incoming Clinical Data,256
+547,Interpret Incoming Clinical Data,55
+577,Interpret Incoming Clinical Data,458
+6,Plan For or Schedule Follow-Up Appointment,600
+15,Plan For or Schedule Follow-Up Appointment,197
+40,Plan For or Schedule Follow-Up Appointment,119
+164,Plan For or Schedule Follow-Up Appointment,312
+264,Plan For or Schedule Follow-Up Appointment,144
+371,Plan For or Schedule Follow-Up Appointment,3
+419,Plan For or Schedule Follow-Up Appointment,0
+482,Plan For or Schedule Follow-Up Appointment,192
+547,Plan For or Schedule Follow-Up Appointment,0
+577,Plan For or Schedule Follow-Up Appointment,91
+6,Review Social History,1328
+15,Review Social History,590
+40,Review Social History,178
+164,Review Social History,1363
+264,Review Social History,355
+371,Review Social History,4
+419,Review Social History,210
+482,Review Social History,607
+547,Review Social History,247
+577,Review Social History,746
+6,Review Special History,556
+15,Review Special History,333
+40,Review Special History,102
+164,Review Special History,11
+264,Review Special History,196
+371,Review Special History,2
+419,Review Special History,16
+482,Review Special History,218
+547,Review Special History,189
+577,Review Special History,492
+6,Review/Discuss Documents During Visit,854
+15,Review/Discuss Documents During Visit,728
+40,Review/Discuss Documents During Visit,35
+164,Review/Discuss Documents During Visit,1697
+264,Review/Discuss Documents During Visit,422
+371,Review/Discuss Documents During Visit,26
+419,Review/Discuss Documents During Visit,444
+482,Review/Discuss Documents During Visit,198
+547,Review/Discuss Documents During Visit,183
+577,Review/Discuss Documents During Visit,310
+6,Sign-off/Close Encounter,2893
+15,Sign-off/Close Encounter,801
+40,Sign-off/Close Encounter,193
+164,Sign-off/Close Encounter,1744
+264,Sign-off/Close Encounter,452
+371,Sign-off/Close Encounter,37
+419,Sign-off/Close Encounter,383
+482,Sign-off/Close Encounter,1132
+547,Sign-off/Close Encounter,283
+577,Sign-off/Close Encounter,2410
+6,Verify Patient Pharmacy Eligibility,2871
+15,Verify Patient Pharmacy Eligibility,810
+40,Verify Patient Pharmacy Eligibility,193
+164,Verify Patient Pharmacy Eligibility,1724
+264,Verify Patient Pharmacy Eligibility,452
+371,Verify Patient Pharmacy Eligibility,37
+419,Verify Patient Pharmacy Eligibility,380
+482,Verify Patient Pharmacy Eligibility,1132
+547,Verify Patient Pharmacy Eligibility,282
+577,Verify Patient Pharmacy Eligibility,2410

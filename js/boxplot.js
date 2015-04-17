@@ -12,6 +12,8 @@ setTimeout(function(){
   boxplot();
 }, 1000);
 
+box_path = "./anthena_boxplot_date_over.csv";
+
 function boxplot(){
 
 var format = d3.time.format("%m/%d/%y"); //set reader for date.format
@@ -19,19 +21,21 @@ var format = d3.time.format("%m/%d/%y"); //set reader for date.format
 var lowerRowWidth = $('.lower-right').width()-40;
 var lowerRowHeight = $('.lower-right').innerHeight()-30;
 
+var dep_id = inter_key;
 
 var myrows;
-var graph = d3.csv("./anthena_boxplot.csv", function(rows) {
-        rows = rows.filter(function(d){
+var graph = d3.csv(box_path, function(rows) {
+        rows.forEach(function(d){
             d.value = parseInt(d.value);
-            if(d.value == 0){
-    console.log(d.value);
-
-                return false;
-            }
-
-            return true;
         });
+
+          // get process of data if dep_id is given
+  if (rows[0].hasOwnProperty('dep_id')){
+    rows = rows.filter(function(row) {
+      return row['dep_id'] == dep_id;
+    });
+  }
+
         // d.date = parseInt(d.date);
         // d.date = format.parse(d.date)
     // console.log(rows);
@@ -39,21 +43,25 @@ var graph = d3.csv("./anthena_boxplot.csv", function(rows) {
     var visualization = d3plus.viz()
         .container("#box-viz")
         .data(myrows)
+        // .dev(true)
         .type("box")
-        .id("date")
-        .x({"value": "key"})
+        .id("second_id")
+        .x({"value": "key", "label":false,"ticks":{"rendering":"geometricPrecision"}})
         .y({"value": "value","scale": "log"})
-        .size(3)
-        .title("Box Plot")
+        .size(5)
+        .title(subtitleTxt)
         .height(lowerRowHeight)
         .width(lowerRowWidth)
         .legend(false)
-       .zoom({
-    "click": true
-    })
+        .tooltip({"anchor":"top","font":{"size":8}, "small":180, "children":false})
         .font({
                 "size":6,
-            });
+        })
+        .ui([{ 
+                "method": "type",
+                "value": ["scatter","box"]
+            },
+        ]);
     visualization.draw();
 
 });

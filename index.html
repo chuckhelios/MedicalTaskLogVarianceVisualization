@@ -15,6 +15,17 @@
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script src="http://www.d3plus.org/js/d3plus.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script src="js/bootstrap.js"></script>
+<link href="css/bootstrap-switch.css" rel="stylesheet">
+<script src="js/bootstrap-switch.js"></script>
+
+<!-- The noUiSlider script and stylesheet -->
+<!-- Use the files with *.min.* for the minified versions. -->
+<link href="css/jquery.nouislider.min.css" rel="stylesheet">
+
+<!-- Use the 'all' version to get all documented features. -->
+<!-- Includes wNumb, libLink and the pips add-on -->
+<script src="js/jquery.nouislider.all.min.js"></script>
+<script src="js/moment.js"></script>
 
 </head>
 
@@ -24,7 +35,20 @@
 <section id="header">
 	<div class="container">
 		<div class="row">
-			<h1>Visualizations</h1>
+			<div class="col-lg-12">
+			<h2 align = "center">EHR Data Visualization</h2>
+   		 <h4 align ="center">The plots show different representations of data for EHR Tasks for the month of June 2012. You could visualize the following information</h4>
+   		 
+   		 </br><h5 >1. Stacked-Bar Graph (Top). Visualize the variation of tasks over department as well as the spread across time.
+</h5>
+   		 <h5 >2. Multiples (Top). Visualize the relative spread of each Task across the timeline (standard baselines for specific particular Task).</h5>
+   		 <h5 >(YOU CAN SWITCH BETWEEN OPTION 1 AND 2 BY CHECKING EITHER OF THE RADIO BUTTONS PROVIDED.)</h5>
+   		 <h5 >3. Stream-Graph (Bottom Left). Visualize the variation in Tasks on a continuous spectrum across the timeline. Interactive time plot area to inquire the exact point data values.
+</h5>
+   		 <h5 >4. Box-and-Whiskers Graph (Bottom Right). Visualize the statistical summary of each task, and inquire of the individual totals using interactive dots on data-axes (support for day base and eacounter base).</h5>
+   	 </br>
+   	 <p align ="center">(USE THE NAVIGATION POD TO SWITCH BETWEEN VIEWS)</p>
+   	 </div>
 		</div>
 	</div>
 </section>
@@ -39,23 +63,27 @@
 			      <label><input id="multiples" class="radiobtn" type="radio" name="mode" value="multiples" disabled> Multiples</label>
 			      <label><input id="stacked" type="radio" class="radiobtn" name="mode" value="stacked" checked> Stacked </label>
 			    </form>
+<!-- 			    <div id="slider-date"></div>
+			    <span class="example-val" id="event-start">Thursday, 30th August 2012</span>
+			    <span class="example-val" id="event-end">Thursday, 10th April 2014</span> -->
 			    <!-- d3 vis -->
 			</div>
 
 		</div>
 		<div class="row centered mid-row">
 			<div class="col-xl-12 btn-div">
+				<button id="departmentID" class="btn btn-danger btn-circle btn-xs"><i class="glyphicon glyphicon-repeat"></i></button>
+
 				<i class="glyphicon glyphicon-chevron-left left-arrow"></i>
 				<i class="glyphicon glyphicon-chevron-up up-arrow"></i>
 				<i class="glyphicon glyphicon-chevron-right right-arrow" ></i>
 				<i class="glyphicon glyphicon-chevron-down down-arrow"></i>
 				<i class="glyphicon glyphicon-plus plus-reset"></i>
-
+<!-- 				<input id="TheCheckBox" type="checkbox" data-off-text="Encounter" data-on-text="Date" checked="false" class="BSswitch"> -->
 			</div>
 		</div>
 		<div class="lower-row">
 			<div class="lower-left">
-				<div class="departIDtxt"></div>
 				<div class="chart"></div>
 			</div>
 
@@ -70,8 +98,8 @@
 
 
 <script src="js/my-main.js"></script>
-<script src="js/barplot2.js"></script>
 <script src="js/streamplot.js"></script>
+<script src="js/barplot2.js"></script>
 <script src="js/boxplot.js"></script>
 
 

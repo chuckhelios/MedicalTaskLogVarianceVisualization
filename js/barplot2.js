@@ -1,7 +1,7 @@
 
 var margin = {
     top: 30,
-    right: 20,
+    right: 30,
     bottom: 40,
     left: 150
 };
@@ -11,6 +11,7 @@ setTimeout(function(){
     barchat();
 }, 1000);
 
+// main function
 function barchat(){
 
 var upperRowWidth = $('#upper').width();
@@ -34,7 +35,7 @@ var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom")
     .tickSize(0)
-    .tickFormat(d3.time.format('%a %d'));
+    // .tickFormat(d3.time.format('%a %d'));
 
 var yAxis = d3.svg.axis()
     .scale(y2)
@@ -46,9 +47,9 @@ var nest = d3.nest()
     return d.key;
 });
 
-var nest_date = d3.nest()
+var nest_dep_id = d3.nest()
     .key(function (d) {
-    return d.date;
+    return d.dep_id;
 });
 
 var stack = d3.layout.stack()
@@ -56,7 +57,7 @@ var stack = d3.layout.stack()
     return d.values;
 })
     .x(function (d) {
-    return d.year;
+    return d.dep_id;
 })
     .y(function (d) {
     return d.value;
@@ -68,7 +69,7 @@ var stack = d3.layout.stack()
  
 
 var color = d3.scale.category10();
-var format = d3.time.format("%m/%d/%y"); //set reader for date.format
+var format = d3.time.format("%m/%d/%y"); //set reader for dep_id.format
 
 var svg = d3.select("#upper").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -86,25 +87,26 @@ var tip = d3.tip()
         return lis
       });
  
-
-var graph = d3.csv("./athena_deptStem.csv", function(data) {
+//////// read file /////////
+var graph = d3.csv("./barchart.csv", function(data) {
     // formate data
     data.forEach(function (d) {
-        d.date = format.parse(d.date); 
+        // d.dep_id = format.parse(d.dep_id); 
         d.value = +d.value;
     });
-    // nest data group by date
-    var dataByGroup_date = nest_date.entries(data);
 
+
+    // nest data group by dep_id
+    var dataByGroup_dep_id = nest_dep_id.entries(data);
 
     // calculates sum of all  task per day
-    dataByGroup_date.forEach(function (d) {
+    dataByGroup_dep_id.forEach(function (d) {
         var order = d.values.map(function (d) {
             return d.value;
         });
         // console.log(order);
-        d.date_wise_sum = d3.sum(order);
-        // console.log(d.date_wise_sum);
+        d.dep_id_wise_sum = d3.sum(order);
+        // console.log(d.dep_id_wise_sum);
     });
 
     var dataByGroup = nest.entries(data);
@@ -112,7 +114,7 @@ var graph = d3.csv("./athena_deptStem.csv", function(data) {
 
     //stack_year(dataByGroup_year);
     x.domain(dataByGroup[0].values.map(function (d) {
-        return d.date;
+        return d.dep_id;
     }));
     y0.domain(dataByGroup.map(function (d) {
         return d.key;
@@ -120,8 +122,8 @@ var graph = d3.csv("./athena_deptStem.csv", function(data) {
     y1.domain([0, d3.max(data, function (d) {
         return d.value;
     })]).range([y0.rangeBand(), 0]);
-    y2.domain([0, d3.max(dataByGroup_date, function (d) {
-        return d.date_wise_sum;
+    y2.domain([0, d3.max(dataByGroup_dep_id, function (d) {
+        return d.dep_id_wise_sum;
     })]).range([height, 0]);
 
     var group = svg.selectAll(".group")
@@ -152,12 +154,12 @@ var graph = d3.csv("./athena_deptStem.csv", function(data) {
     })
         .attr("class", "bar")
         .attr("x", function (d) {
-        return x(d.date);
+        return x(d.dep_id);
     })
         .attr("y", function (d) {
         return y2(d.value + d.valueOffset) - height;
     })
-        .attr("width", 8)
+        .attr("width", 20)
         .attr("height", function (d) {
         return height - y2(d.value);
     });
@@ -175,12 +177,13 @@ var graph = d3.csv("./athena_deptStem.csv", function(data) {
         .attr("x", "1em")
         .attr("dy", ".71em")
         .style("text-anchor", "end")
-        .text("Total Task Groups in Each Department")
+        .text("Total coount of Task Groups")
         .attr("y", -50);
 
     // x axis
     svg.append("g")
         .attr("class", "x axis")
+        .attr("id", "xaxis")
         .attr("transform", "translate(3," + height + ")")
         .call(xAxis)
         .selectAll("text")
@@ -188,7 +191,13 @@ var graph = d3.csv("./athena_deptStem.csv", function(data) {
         .attr("dx", "-.55em")
         .attr("dy", ".21em")
         .attr("y", ".5em")
-        .attr("transform", "rotate(-90)")
+        .attr("transform", "rotate(-90)");
+
+        svg.append("text")      // text label for the x axis
+        .attr("x", width/2 )
+        .attr("y", height + margin.bottom -6)
+        .style("text-anchor", "middle")
+        .text("Department ID");
 
     d3.selectAll("input").on("change", change);
 
@@ -198,7 +207,9 @@ var graph = d3.csv("./athena_deptStem.csv", function(data) {
 
     function change() {
         clearTimeout(timeout);
-
+        setTimeout(function(){
+            console.log("test");
+        }, 1000);
         if (this.value === "stacked") transitionStacked();
         else transitionMultiples();
     }
@@ -227,7 +238,7 @@ var graph = d3.csv("./athena_deptStem.csv", function(data) {
             .attr("x", "1em")
             .attr("dy", ".71em")
             .style("text-anchor", "end")
-            .text("Total Task Groups in Each Department")
+            .text("Total coount of Task Groups")
             .attr("y", -50);
 
         if (upperRowHeight<130){
@@ -283,6 +294,40 @@ var graph = d3.csv("./athena_deptStem.csv", function(data) {
                   .attr("opacity", "1")
                   .style("stroke", "none");
               });
+    // interaction of x axis tick        
+    svg.selectAll("#xaxis .tick")
+            .on("mouseover", function(){
+              d3.select(this).select('text')
+                    .style("font-size", 14)
+                    .style("fill", "red")
+                    .style("cursor", "pointer")
+            })
+            .on("mouseout", function(){
+                d3.select(this).select('text')
+                    .style("font-size", 8)
+                    .style("fill", "black")
+            })
+            .on("click", function(d,i){
+                inter_key = d;
+                $(".departIDtxt p").text("");
+                $(".chart svg").remove();
+                $(".chart .remove").remove();
+                $("#box-viz svg").remove();
+                $("#box-viz #d3plus_message").remove();
+                $("#box-viz #d3plus_drawer").remove();
+
+                  if (inter_key == "overview"){
+                    csvpath = "./athena_streamplot_Over.csv";
+                  }
+                  else {
+                    csvpath = "./athena_perid.csv"; 
+                    box_path = "./anthena_boxplot_encounter_dep.csv";         
+                    }
+                 streamChart();
+                 boxplot();
+
+  
+            });
 
     if (upperRowHeight<130){
         svg.selectAll(".y.axis").remove();

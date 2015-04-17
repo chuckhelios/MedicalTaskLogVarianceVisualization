@@ -24,16 +24,7 @@ p {
   stroke-width: 2px;
   shape-rendering: crispEdges;
 }
-.departIDtxt p{
-  font-size: 12px;
-  display: inline-block;
-  padding: 2px;
-  margin-left: 20px;
-  color: white;
-  font-weight: bold;
-  background-color: black;
-  opacity: 0.7
-}
+
 button {
   right: 50px;
   top: 10px;

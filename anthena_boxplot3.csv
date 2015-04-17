@@ -1,0 +1,211 @@
+dep_id,key,value
+6,Assess & Diagnose,0.597527731
+6,Collect Clinical Encounter Reason,0.6310369830000001
+6,Collect History of Present Illness,22.651592013000002
+6,Collect Vitals,2.6716934640000014
+6,Collect/Update Confidential Information,0.02728639
+6,Collect/Update Social History,4.376164861
+6,Collect/Update Special History,2.8900369940000004
+6,Collect/Update/Review Patient Provider List Information,0.006756757
+6,Conduct & Document Evaluation & Management,0.0
+6,Conduct Physical Exam,37.437808567
+6,Conduct Procedure,0.8979388389999998
+6,Conduct Review of Systems,5.104643143999999
+6,Creating/Sending Out Orders,26.463967784
+6,Enter Patient Flow Tracking,0.0
+6,Interpret Incoming Clinical Data,0.301580328
+6,Plan For or Schedule Follow-Up Appointment,3.7715920870000006
+6,Review Social History,1.932268989
+6,Review Special History,1.664243748
+6,Review/Discuss Documents During Visit,4.837520114
+6,Sign-off/Close Encounter,18.377268684
+6,Verify Patient Pharmacy Eligibility,18.238418564
+15,Assess & Diagnose,2.232911719
+15,Collect Clinical Encounter Reason,0.153721532
+15,Collect History of Present Illness,33.693013746999995
+15,Collect Vitals,0.11273923400000001
+15,Collect/Update Confidential Information,0.050706033
+15,Collect/Update Social History,11.224150112999997
+15,Collect/Update Special History,5.528474287000001
+15,Collect/Update/Review Patient Provider List Information,0.073095671
+15,Conduct & Document Evaluation & Management,0.221212121
+15,Conduct Physical Exam,49.90421121399999
+15,Conduct Procedure,1.284797748
+15,Conduct Review of Systems,32.844782354
+15,Creating/Sending Out Orders,33.96608705599999
+15,Enter Patient Flow Tracking,0.0
+15,Interpret Incoming Clinical Data,0.32340169
+15,Plan For or Schedule Follow-Up Appointment,3.999552103000001
+15,Review Social History,5.597990552999998
+15,Review Special History,2.8132276839999997
+15,Review/Discuss Documents During Visit,14.047854024
+15,Sign-off/Close Encounter,16.211996959000007
+15,Verify Patient Pharmacy Eligibility,16.211996959000007
+40,Assess & Diagnose,0.0
+40,Collect Clinical Encounter Reason,1.8270709669999998
+40,Collect History of Present Illness,51.574722988999994
+40,Collect Vitals,1.359111477
+40,Collect/Update Confidential Information,0.0
+40,Collect/Update Social History,7.432846565999999
+40,Collect/Update Special History,9.832121638
+40,Collect/Update/Review Patient Provider List Information,2.111688149
+40,Conduct & Document Evaluation & Management,0.0
+40,Conduct Physical Exam,49.907484673
+40,Conduct Procedure,1.608241759
+40,Conduct Review of Systems,51.52815583100001
+40,Creating/Sending Out Orders,32.641489555999996
+40,Enter Patient Flow Tracking,0.0
+40,Interpret Incoming Clinical Data,1.152445593
+40,Plan For or Schedule Follow-Up Appointment,9.500511582
+40,Review Social History,4.0457777529999985
+40,Review Special History,5.416080653
+40,Review/Discuss Documents During Visit,2.540771648
+40,Sign-off/Close Encounter,15.539081834000001
+40,Verify Patient Pharmacy Eligibility,15.539081834000001
+164,Assess & Diagnose,5.48331912
+164,Collect Clinical Encounter Reason,6.599752354000001
+164,Collect History of Present Illness,41.44809910399999
+164,Collect Vitals,27.608079385000003
+164,Collect/Update Confidential Information,0.0
+164,Collect/Update Social History,0.703788478
+164,Collect/Update Special History,0.0
+164,Collect/Update/Review Patient Provider List Information,0.06281841499999999
+164,Conduct & Document Evaluation & Management,0.0
+164,Conduct Physical Exam,44.222870591
+164,Conduct Procedure,0.34476172899999996
+164,Conduct Review of Systems,21.010001755
+164,Creating/Sending Out Orders,48.827964253999994
+164,Enter Patient Flow Tracking,1.2998994899999998
+164,Interpret Incoming Clinical Data,1.097188718
+164,Plan For or Schedule Follow-Up Appointment,2.877020047
+164,Review Social History,0.3500638569999999
+164,Review Special History,0.112070839
+164,Review/Discuss Documents During Visit,15.614739038
+164,Sign-off/Close Encounter,15.890673830000004
+164,Verify Patient Pharmacy Eligibility,15.700624185999999
+264,Assess & Diagnose,0.0
+264,Collect Clinical Encounter Reason,0.8845411990000001
+264,Collect History of Present Illness,40.530596845
+264,Collect Vitals,5.343702582
+264,Collect/Update Confidential Information,0.0
+264,Collect/Update Social History,1.890246412
+264,Collect/Update Special History,0.17424242399999998
+264,Collect/Update/Review Patient Provider List Information,4.781097176
+264,Conduct & Document Evaluation & Management,0.7334991409999999
+264,Conduct Physical Exam,75.771677899
+264,Conduct Procedure,3.0609947780000004
+264,Conduct Review of Systems,76.666149527
+264,Creating/Sending Out Orders,33.207366765
+264,Enter Patient Flow Tracking,0.0
+264,Interpret Incoming Clinical Data,2.744814055
+264,Plan For or Schedule Follow-Up Appointment,5.575368281000001
+264,Review Social History,0.986934801
+264,Review Special History,0.08712121199999999
+264,Review/Discuss Documents During Visit,17.763737792000004
+264,Sign-off/Close Encounter,19.355774306
+264,Verify Patient Pharmacy Eligibility,19.355774306
+371,Assess & Diagnose,0.13636363599999998
+371,Collect Clinical Encounter Reason,0.090909091
+371,Collect History of Present Illness,7.859090909000001
+371,Collect Vitals,0.0
+371,Collect/Update Confidential Information,0.0
+371,Collect/Update Social History,0.0
+371,Collect/Update Special History,0.0
+371,Collect/Update/Review Patient Provider List Information,0.0
+371,Conduct & Document Evaluation & Management,0.0
+371,Conduct Physical Exam,8.845454546000001
+371,Conduct Procedure,2.390909091
+371,Conduct Review of Systems,7.8
+371,Creating/Sending Out Orders,2.909090909000001
+371,Enter Patient Flow Tracking,0.0
+371,Interpret Incoming Clinical Data,0.0
+371,Plan For or Schedule Follow-Up Appointment,0.13636363599999998
+371,Review Social History,0.0
+371,Review Special History,0.0
+371,Review/Discuss Documents During Visit,1.318181818
+371,Sign-off/Close Encounter,2.0
+371,Verify Patient Pharmacy Eligibility,2.0
+419,Assess & Diagnose,6.047392027000001
+419,Collect Clinical Encounter Reason,0.09808612400000001
+419,Collect History of Present Illness,52.36806694800001
+419,Collect Vitals,1.2657041359999999
+419,Collect/Update Confidential Information,0.0
+419,Collect/Update Social History,1.142724232
+419,Collect/Update Special History,0.105263158
+419,Collect/Update/Review Patient Provider List Information,0.0
+419,Conduct & Document Evaluation & Management,0.0
+419,Conduct Physical Exam,69.97053142
+419,Conduct Procedure,0.6611504840000001
+419,Conduct Review of Systems,68.934024147
+419,Creating/Sending Out Orders,44.96915057200001
+419,Enter Patient Flow Tracking,0.0
+419,Interpret Incoming Clinical Data,0.33885115299999996
+419,Plan For or Schedule Follow-Up Appointment,0.0
+419,Review Social History,0.6960656740000001
+419,Review Special History,0.052631579000000005
+419,Review/Discuss Documents During Visit,18.759895001
+419,Sign-off/Close Encounter,17.335964214
+419,Verify Patient Pharmacy Eligibility,17.220654573
+482,Assess & Diagnose,8.078783957999999
+482,Collect Clinical Encounter Reason,0.4578338189999999
+482,Collect History of Present Illness,39.129451421
+482,Collect Vitals,3.471611762
+482,Collect/Update Confidential Information,0.0
+482,Collect/Update Social History,6.730357985000001
+482,Collect/Update Special History,1.2697349660000004
+482,Collect/Update/Review Patient Provider List Information,0.0
+482,Conduct & Document Evaluation & Management,0.0
+482,Conduct Physical Exam,41.429678098000004
+482,Conduct Procedure,1.823549346
+482,Conduct Review of Systems,39.869633302
+482,Creating/Sending Out Orders,51.718291182
+482,Enter Patient Flow Tracking,0.053506148
+482,Interpret Incoming Clinical Data,0.587621177
+482,Plan For or Schedule Follow-Up Appointment,2.5194564880000003
+482,Review Social History,3.3439242580000013
+482,Review Special History,1.332707721
+482,Review/Discuss Documents During Visit,2.578369635
+482,Sign-off/Close Encounter,14.928212467999996
+482,Verify Patient Pharmacy Eligibility,14.928212467999996
+547,Assess & Diagnose,0.388157895
+547,Collect Clinical Encounter Reason,6.095520852000001
+547,Collect History of Present Illness,28.793821090999998
+547,Collect Vitals,12.124236876
+547,Collect/Update Confidential Information,0.0
+547,Collect/Update Social History,4.91904762
+547,Collect/Update Special History,2.010574514
+547,Collect/Update/Review Patient Provider List Information,0.076923077
+547,Conduct & Document Evaluation & Management,2.494444444
+547,Conduct Physical Exam,45.150983227
+547,Conduct Procedure,0.0
+547,Conduct Review of Systems,1.1970342520000001
+547,Creating/Sending Out Orders,18.995830925
+547,Enter Patient Flow Tracking,0.0
+547,Interpret Incoming Clinical Data,3.2396214889999997
+547,Plan For or Schedule Follow-Up Appointment,0.0
+547,Review Social History,1.447619047
+547,Review Special History,1.005287257
+547,Review/Discuss Documents During Visit,18.314401387
+547,Sign-off/Close Encounter,15.215956557
+547,Verify Patient Pharmacy Eligibility,15.215956557
+577,Assess & Diagnose,9.780653548000002
+577,Collect Clinical Encounter Reason,0.562679396
+577,Collect History of Present Illness,36.387264668
+577,Collect Vitals,1.1514446129999998
+577,Collect/Update Confidential Information,0.0
+577,Collect/Update Social History,7.592913650000002
+577,Collect/Update Special History,2.69314679
+577,Collect/Update/Review Patient Provider List Information,0.0
+577,Conduct & Document Evaluation & Management,0.0
+577,Conduct Physical Exam,42.91517826500001
+577,Conduct Procedure,2.05051324
+577,Conduct Review of Systems,38.660061774
+577,Creating/Sending Out Orders,35.924219679000004
+577,Enter Patient Flow Tracking,0.0
+577,Interpret Incoming Clinical Data,0.810660774
+577,Plan For or Schedule Follow-Up Appointment,0.498690393
+577,Review Social History,3.801576323
+577,Review Special History,2.5181195720000003
+577,Review/Discuss Documents During Visit,1.6081456689999998
+577,Sign-off/Close Encounter,12.322112232
+577,Verify Patient Pharmacy Eligibility,12.322112232

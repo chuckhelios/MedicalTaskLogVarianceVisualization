@@ -1,3 +1,6 @@
+// interactive variable
+var inter_key= "overview";
+
 
 // screen resize 
 $(function(){
@@ -182,8 +185,8 @@ $( ".plus-reset" ).click(function() {
 
 function removeDraw(){
 	$('#upper svg').remove();
-	$(".departIDtxt p").remove(); //streamplot title
 	$(".chart svg").remove();
+	$(".chart .remove").remove();
 	$("#box-viz svg").remove();
 	$("#box-viz #d3plus_message").remove();
 	$("#box-viz #d3plus_drawer").remove();
@@ -197,3 +200,118 @@ function redraw() {
 	streamChart();
 	boxplot();
 }
+
+///////////////////////////////////////////////
+// onchange department id
+
+$("#departmentID").click(function(){
+	$(".chart svg").remove();
+	$(".chart .remove").remove();
+	$("#box-viz svg").remove();
+	$("#box-viz #d3plus_message").remove();
+	$("#box-viz #d3plus_drawer").remove();
+  subtitleTxt = "Overall View";
+    csvpath = "./athena_streamplot_Over.csv";
+  	box_path = "./anthena_boxplot_date_over.csv";
+    streamChart();
+    boxplot();
+  }); // end of onchange
+
+
+$('.BSswitch').bootstrapSwitch('state', true);
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// Create a new date from a string, return as a timestamp.
+// function timestamp(str){
+//     return new Date(str).getTime();   
+// }
+
+
+// // Create a list of day and monthnames.
+// var
+// 	weekdays = [
+// 		"Sunday", "Monday", "Tuesday",
+// 		"Wednesday", "Thursday", "Friday",
+// 		"Saturday"
+// 	],
+// 	months = [
+// 		"January", "February", "March",
+// 		"April", "May", "June", "July",
+// 		"August", "September", "October",
+// 		"November", "December"
+// 	];
+
+// // Append a suffix to dates.
+// // Example: 23 => 23rd, 1 => 1st.
+// function nth (d) {
+//   if(d>3 && d<21) return 'th';
+//   switch (d % 10) {
+//         case 1:  return "st";
+//         case 2:  return "nd";
+//         case 3:  return "rd";
+//         default: return "th";
+//     }
+// }
+
+// // Create a string representation of the date.
+// function formatDate ( date ) {
+//     return months[date.getMonth()] + "/" + date.getDate()
+//         + "/" + date.getFullYear();
+// }
+
+// // Write a date as a pretty value.
+// function setDate( value ){
+//     $(this).html(formatDate(new Date(+value)));   
+// }
+
+// $("#slider-date").noUiSlider({
+// // Create two timestamps to define a range.
+//     range: {
+//         min: timestamp('June 1, 2012'),
+//         max: timestamp('June 30, 2012')
+//     },
+	
+// // Steps of one day
+//     step: 1 * 24 * 60 * 60 * 1000,
+	
+// // Two more timestamps indicate the handle starting positions.
+//     start: [ timestamp('June 1, 2012'), timestamp('June 30, 2012') ],
+	
+// // No decimals
+// 	format: wNumb({
+// 		decimals: 0
+// 	})
+// });
+
+// $("#slider-date").Link('lower').to($("#event-start"), setDate);
+// $("#slider-date").Link('upper').to($("#event-end"), setDate);
+// ////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////
+
+// // bind timestamp
+// var begin_date = new Date( $("#event-start").text());
+// var end_date = new Date($("#event-end").text());
+// range = []
+// mil = 86400000 //24h
+// for (var i=begin_date.getTime(); i<end_date.getTime();i=i+mil) {
+
+//   range.push(new Date(i))
+// }
+
+// var rest_range = [];
+// $("#slider-date").change(function(){
+// 	rest_range = range;
+// 	begin_date = new Date( $("#event-start").text());
+// 	end_date = new Date($("#event-end").text());
+// 	for (var i=begin_date.getTime(); i<end_date.getTime();i=i+mil) {
+//   		range.pop(new Date(i))
+// 	}
+// 	$('#upper svg').remove();
+// 	barchat();
+// });
+
+// console.log(rest_range);
+// end of bind timestamp
+
